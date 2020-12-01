@@ -4,11 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProject2020.Data.Enumerations;
+using WebProject2020.Data.Models;
 
 namespace WebProject2020.Models
 {
     public class Details
     {
+        public Details()
+        {
+            this.VehiclesDetails = new HashSet<VehicleDetails>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -32,6 +38,8 @@ namespace WebProject2020.Models
 
         [Required]
         public decimal Price { get; set; }
+
+        public ICollection<VehicleDetails> VehiclesDetails { get; set; }
 
     }
 }
