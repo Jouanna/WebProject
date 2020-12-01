@@ -10,18 +10,25 @@ namespace WebProject2020.Data.Models
 {
     public class VehicleDetails
     {
+        public VehicleDetails()
+        {
+            this.Deals = new HashSet<Deals>();
+        }
+
         [Key]
         public int Id { get; set; }
 
         [Required]
         [ForeignKey("Details")]
         public int DetailsId { get; set; }
-        public Details Detail { get; set; }
+        public Details Details { get; set; }
 
         [Required]
         [ForeignKey("Vehicle")]
         public int VehicleId { get; set; }
         public Vehicle Vehicle { get; set; }
+
+        public virtual ICollection<Deals> Deals { get; set; }
 
     }
 }

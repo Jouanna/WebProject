@@ -39,7 +39,7 @@ namespace WebProject2020.Models
         [Required]
         public decimal Price { get; set; }
 
-        public ICollection<VehicleDetails> VehiclesDetails { get; set; }
+        public virtual ICollection<VehicleDetails> VehiclesDetails { get; set; }
 
     }
 }

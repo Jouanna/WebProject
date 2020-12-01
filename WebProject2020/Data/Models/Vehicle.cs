@@ -19,7 +19,7 @@ namespace WebProject2020.Data.Models
         [Required]
         public string BrandName { get; set; }
 
-        public ICollection<VehicleDetails> VehiclesDetails { get; set; }
+        public virtual ICollection<VehicleDetails> VehiclesDetails { get; set; }
 
     }
 }

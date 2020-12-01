@@ -20,7 +20,7 @@ namespace WebProject2020.Data.Models
         [Required]
         public string City { get; set; }
 
-        public ICollection<SellerInfo> SellersInfo { get; set; }
+        public virtual ICollection<SellerInfo> SellersInfo { get; set; }
 
 
 
