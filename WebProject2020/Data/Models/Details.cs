@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProject2020.Data.Enumerations;
@@ -38,6 +39,10 @@ namespace WebProject2020.Models
 
         [Required]
         public decimal Price { get; set; }
+
+        [ForeignKey("Stores")]
+        public int StoreId { get; set; }
+        public Stores Store { get; set; }
 
         public virtual ICollection<VehicleDetails> VehiclesDetails { get; set; }
 

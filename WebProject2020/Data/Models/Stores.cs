@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using WebProject2020.Models;
 
 namespace WebProject2020.Data.Models
 {
@@ -11,6 +12,7 @@ namespace WebProject2020.Data.Models
         public Stores()
         {
             this.SellersInfo = new HashSet<SellerInfo>();
+            this.Cars = new HashSet<Details>();
         }
 
         [Key]
@@ -20,7 +22,11 @@ namespace WebProject2020.Data.Models
         [Required]
         public string City { get; set; }
 
+        public string Address { get; set; }
+
         public virtual ICollection<SellerInfo> SellersInfo { get; set; }
+
+        public virtual ICollection<Details> Cars { get; set; }
 
 
 

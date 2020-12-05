@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using WebProject2020.Data.Enumerations;
 
 namespace WebProject2020.Data.Models
 {
@@ -23,6 +24,8 @@ namespace WebProject2020.Data.Models
         public VehicleDetails VehicleDetails { get; set; }
 
         public DateTime Date { get; set; }
+        public decimal Discount { get; set; }
+        public PaymentType PaymentType { get; set; }
 
     }
 }
